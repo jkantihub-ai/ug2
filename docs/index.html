@@ -14,11 +14,26 @@
     <meta name="twitter:description" content="Serial Entrepreneur, passionate about Health & Fitness, and mentor for Start-ups." />
     <meta name="twitter:image" content="https://44dee33c-1d7e-411a-a0dc-093ff0618859-00-14pl4qtmqfa8j.pike.replit.dev/opengraph.jpg" />
 
-    <link rel="icon" type="image/png" href="https://www.utpalghoshofficial.com/images/favicon.png" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
     <title>Utpal Ghosh | Serial Entrepreneur</title>
+    <script>
+      (function() {
+        if (window.location.search.match(/[?&]p=/)) {
+          var redirect = window.location.search.slice(1).split('&').reduce(function(result, item) {
+            if (item.indexOf('p=') === 0) {
+              return decodeURIComponent(item.slice(2).replace(/~and~/g, '&'));
+            }
+            return result;
+          }, null);
+          if (redirect) {
+            window.history.replaceState(null, null, '/ug2' + redirect + (window.location.hash || ''));
+          }
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-CkCSkOeU.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-CG1z5Nrx.css">
   </head>

@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  // ... other configurations
+  plugins: [
+    vue(),
+    // Other plugins can remain here
+  ],
   build: {
-    outDir: 'docs',
+    outDir: 'docs', // Changed output directory to docs
   },
 });

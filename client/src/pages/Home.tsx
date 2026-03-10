@@ -396,7 +396,7 @@ export default function Home() {
 
       {/* Footer Minimal */}
       <footer className="py-8 border-t border-border text-center text-muted-foreground text-sm">
-        <p>&copy; {new Date().getFullYear()} Utpal Ghosh. All rights reserved.</p>
+        <p>&copy; 2026 Utpal Ghosh. All rights reserved.</p>
       </footer>
     </div>
   );

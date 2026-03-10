@@ -1,13 +1,21 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import react from '@vitejs/plugin-react';
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
-    // Other plugins can remain here
+    react(),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "client", "src"),
+      "@shared": path.resolve(__dirname, "shared"),
+    },
+  },
+  root: path.resolve(__dirname, "client"),
   build: {
-    outDir: 'docs', // Changed output directory to docs
+    outDir: path.resolve(__dirname, "docs"),
+    emptyOutDir: true,
   },
 });

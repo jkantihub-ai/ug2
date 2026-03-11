@@ -16,6 +16,11 @@ header {
     background-color: #fff;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -42,11 +47,20 @@ nav li a {
     text-decoration: none;
     color: #555;
     padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #007bff;
+}
+
+main {
+    padding-top: 80px;
 }
 
 #hero {
     padding: 80px 0;
-    text-align: center;
+    text-align: left;
 }
 
 #hero .container {
@@ -63,13 +77,15 @@ nav li a {
 
 #hero h2 {
     font-size: 1.5rem;
-    color: #777;
+    color: #007bff;
     margin-bottom: 20px;
 }
 
 .hero-image img {
     max-width: 100%;
     border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 section {
@@ -84,6 +100,10 @@ section h2 {
 
 #experience .job {
     margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 5px solid #007bff;
 }
 
 #experience .job h3 {
@@ -103,9 +123,31 @@ section h2 {
 
 #portfolio .project {
     background-color: #fff;
-    padding: 20px;
     border: 1px solid #eee;
     border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#portfolio .project:hover {
+    transform: translateY(-5px);
+}
+
+#portfolio .project img {
+    max-width: 100%;
+}
+
+#portfolio .project h3, 
+#portfolio .project p {
+    padding: 0 20px;
+}
+
+#portfolio .project p {
+    padding-bottom: 20px;
+}
+
+#contact {
+    text-align: center;
 }
 
 footer {

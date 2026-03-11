@@ -1,0 +1,82 @@
+/* Light Theme */
+.light-theme {
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --header-bg-color: #fff;
+    --header-border-color: #eee;
+    --logo-color: #333;
+    --nav-link-color: #555;
+    --nav-link-hover-color: #007bff;
+    --hero-h2-color: #007bff;
+    --job-bg-color: #fff;
+    --job-border-color: #007bff;
+    --job-italic-color: #777;
+    --project-bg-color: #fff;
+    --project-border-color: #eee;
+    --footer-bg-color: #fff;
+    --footer-border-color: #eee;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background-color: #121212;
+    --text-color: #fff;
+    --header-bg-color: #1f1f1f;
+    --header-border-color: #333;
+    --logo-color: #fff;
+    --nav-link-color: #ccc;
+    --nav-link-hover-color: #4da3ff;
+    --hero-h2-color: #4da3ff;
+    --job-bg-color: #1f1f1f;
+    --job-border-color: #4da3ff;
+    --job-italic-color: #aaa;
+    --project-bg-color: #1f1f1f;
+    --project-border-color: #333;
+    --footer-bg-color: #1f1f1f;
+    --footer-border-color: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    border-bottom: 1px solid var(--header-border-color);
+}
+
+.logo {
+    color: var(--logo-color);
+}
+
+nav li a {
+    color: var(--nav-link-color);
+}
+
+nav li a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+#hero h2 {
+    color: var(--hero-h2-color);
+}
+
+#experience .job {
+    background-color: var(--job-bg-color);
+    border-left: 5px solid var(--job-border-color);
+}
+
+#experience .job p {
+    color: var(--job-italic-color);
+}
+
+#portfolio .project {
+    background-color: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    border-top: 1px solid var(--footer-border-color);
+}

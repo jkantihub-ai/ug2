@@ -2,8 +2,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .container {
@@ -13,9 +13,9 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: var(--header-bg-color);
     padding: 20px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--header-border-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +33,7 @@ header .container {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: var(--logo-color);
 }
 
 nav ul {
@@ -45,13 +45,13 @@ nav ul {
 
 nav li a {
     text-decoration: none;
-    color: #555;
+    color: var(--nav-link-color);
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
 nav li a:hover {
-    color: #007bff;
+    color: var(--nav-link-hover-color);
 }
 
 main {
@@ -77,7 +77,7 @@ main {
 
 #hero h2 {
     font-size: 1.5rem;
-    color: #007bff;
+    color: var(--hero-h2-color);
     margin-bottom: 20px;
 }
 
@@ -100,10 +100,10 @@ section h2 {
 
 #experience .job {
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: var(--job-bg-color);
     padding: 20px;
     border-radius: 5px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid var(--job-border-color);
 }
 
 #experience .job h3 {
@@ -112,7 +112,7 @@ section h2 {
 
 #experience .job p {
     font-style: italic;
-    color: #777;
+    color: var(--job-italic-color);
 }
 
 #portfolio .projects {
@@ -122,8 +122,8 @@ section h2 {
 }
 
 #portfolio .project {
-    background-color: #fff;
-    border: 1px solid #eee;
+    background-color: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -151,9 +151,9 @@ section h2 {
 }
 
 footer {
-    background-color: #fff;
+    background-color: var(--footer-bg-color);
     padding: 20px 0;
     text-align: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--footer-border-color);
     margin-top: 60px;
 }

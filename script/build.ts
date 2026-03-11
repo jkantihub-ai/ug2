@@ -27,6 +27,9 @@ async function buildAll() {
       outDir: path.resolve(outDir),
       emptyOutDir: true,
     },
+    define: {
+      "import.meta.env.VITE_USE_HASH_ROUTER": subpath ? "true" : "false",
+    },
   });
 }
 

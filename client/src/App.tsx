@@ -1,28 +1,22 @@
-import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/Home";
 
-function Router() {
-  return (
-    <Switch>
-      <Route path="/" component={Home}/>
-      <Route component={NotFound} />
-    </Switch>
-  );
-}
+import { Switch, Route, Router } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
+
+import { Toaster } from "@/components/ui/sonner";
+import { routes } from "@/routes";
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <> 
+    <Router hook={import.meta.env.VITE_USE_HASH_ROUTER ? useHashLocation : undefined}>
+      <Switch>
+        {routes.map(([path, component]) => (
+          <Route key={path} path={path} component={component} />
+        ))}
+      </Switch>
+      </Router>
+      <Toaster />
+    </>
   );
 }
 
